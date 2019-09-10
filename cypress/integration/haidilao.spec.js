@@ -13,10 +13,10 @@ context('visit', () => {
 
       cy.get('#name')
         .type('chee hove')
-        .should('have.value', 'chee hove');
+        .should('have.value', 'your name');
       cy.get('#mobile')
         .type('0124649561')
-        .should('have.value', '0124649561');
+        .should('have.value', '012xxxxxx');
       cy.get('.snappy-picker-selector > .ng-valid')
         .select('Party of 2')
         .should('have.value', '2');

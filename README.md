@@ -1,25 +1,35 @@
-# ReduxSimpleStarter
-
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+# Cypress
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
+This is to automate the line up for haidilao malaysia.
+When line up success, you will still need to manually extract the myUuId from the success response body.
+Sameple response body:
+{ 
+   "customerName":"chee hove",
+   "numberOfGuests":2,
+   "languageCode":"en",
+   "storeId":"4929",
+   "storeName":"Haidilao Hot Pot",
+   "storeLogoUrl":"/attachment/store/?type=image&id=4932_LOGO_1",
+   "storeImageUrl":"/attachment/store/?type=image&id=4932_MAIN_1",
+   "allowCancel":true,
+   "status":"WAITING",
+   "myLineupCode":"A54",
+   "myPosition":43,
+   "myEstimatedWaitingTime":0,
+   "lineupTime":1568083023204,
+   "myUuId":"f44f42f0-c3c8-4f81-bed6-2124438bbd4a",
+   "myCategory":"s"
+}
+replace the myUuId in the code below to get your queue.
+https://lineup.ap.gosnappy.io/lineup/success?storeId=4929&code=9dcec99e-063b-40fe-b9d5-7aa5c19ebd05&lang=en
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+> git clone https://github.com/cheehove/Reacts.git
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
-> npm install
-> npm start
+> yarn cypress
 ```
