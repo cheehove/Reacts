@@ -1,9 +1,10 @@
 /// <reference types="Cypress" />
 
 const name = 'ch';
-const phone = '0124'; //eg: 0125787879
-const pax = '3';
-const store ='7613' // sunwayPyramid=4929, Pavilion=7613
+const phone = '+60124'; //eg: 0125787879
+const pax = '4';
+const store ='4929' // sunwayPyramid=4929, Pavilion=7613
+const noOfRetry = '1';
 
 context('visit', () => {
   describe('Verified visit', () => {
@@ -11,7 +12,7 @@ context('visit', () => {
       cy.visit(`https://lineup.ap.gosnappy.io/lineup/?storeId=${store}&force=true&fbclid=IwAR1X6HHeQ5LciK4zBxUg6fY_8fvSX_-uNh3ncImrT1o14Dhx2UoczQN1Rzw`);
     });
     it('fill in', () => {
-      Cypress.currentTest.retries(0);
+      Cypress.currentTest.retries(noOfRetry);
       cy.visit(`https://lineup.ap.gosnappy.io/lineup/?storeId=${store}&force=true&fbclid=IwAR1X6HHeQ5LciK4zBxUg6fY_8fvSX_-uNh3ncImrT1o14Dhx2UoczQN1Rzw`);
       cy.server();
       cy.route('POST', 'https://lineup.ap.gosnappy.io/v1/la/lineup').as('lineup');
