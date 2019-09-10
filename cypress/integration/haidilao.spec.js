@@ -12,14 +12,11 @@ context('visit', () => {
       cy.route('POST', 'https://lineup.ap.gosnappy.io/v1/la/lineup').as('lineup');
 
       cy.get('#name')
-        .type('chee hove')
-        .should('have.value', 'your name');
+        .type(''); // insert name
       cy.get('#mobile')
-        .type('0124649561')
-        .should('have.value', '012xxxxxx');
+        .type('') // insert phone number
       cy.get('.snappy-picker-selector > .ng-valid')
-        .select('Party of 2')
-        .should('have.value', '2');
+        .select('Party of 2')  // change the require pax in number
       cy.get('.mat-button-wrapper')
         .click();
       cy.wait('@lineup');
