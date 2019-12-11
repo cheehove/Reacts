@@ -3,7 +3,7 @@
 const name = 'ch';
 const phone = '+60124'; //eg: 0125787879
 const pax = '4';
-const store ='4929' // sunwayPyramid=4929, Pavilion=7613
+const store ='4929' // sunwayPyramid=4929, Pavilion=7613 1utama=7264
 const noOfRetry = '1';
 
 context('visit', () => {
